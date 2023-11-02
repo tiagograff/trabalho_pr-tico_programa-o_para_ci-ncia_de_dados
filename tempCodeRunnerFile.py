@@ -1,0 +1,1 @@
+dataFrame = dataFrame.iloc[:, 1:]
