@@ -13,3 +13,27 @@ dataFrame.drop(columns=['Siblings/Spouses Aboard',
 # salvando em outro arquivo csv. limpo = tratado e removendo o index criado pelo próprio pandas
 dataFrame.to_csv(
     'faculdade/trabalho_pratico_programa-o_para_ciencia_de_dados/limpo.csv', index=False)
+# dados primários
+# total de passageitos
+totalPassageiros = dataFrame.shape[0]
+print(totalPassageiros)
+# quantos sobreviventes tiveram
+sobreviventes = dataFrame['Survived'].value_counts()[0]
+# quantos morreram
+mortos = dataFrame['Survived'].value_counts()[1]
+# quantos homens
+homens = dataFrame['Sex'].value_counts()['male']
+# quantas mulheres
+mulheres = dataFrame['Sex'].value_counts()['female']
+# primeira classe
+primeiraClasse = dataFrame['Pclass'].value_counts()[1]
+# segunda classe
+segundaClasse = dataFrame['Pclass'].value_counts()[2]
+# terceira classe
+terceiraClasse = dataFrame['Pclass'].value_counts()[3]
+# array com as tarifas
+tarifaArray = dataFrame['Fare'].to_numpy()
+print(tarifaArray)
+# array com as idades
+IdadeArray = dataFrame['Age'].to_numpy()
+print(IdadeArray)
