@@ -14,10 +14,12 @@ for i in range(len(familiares)):
     familia = familiares[i]
     if familia == 0:
         naoTemFamiliares.append(familia)
+        # caso sobreviveu e não tinha familiares
         if sobreviventes[i] == 0:
             sobreviventesSemFamiliares += 1
     else:
         temFamiliares.append(familia)
+        # caso sobreiveu e tinha familiares
         if sobreviventes[i] == 0:
             sobreviventesComFamiliares += 1
 # tamanho dos arrays com/sem familiares

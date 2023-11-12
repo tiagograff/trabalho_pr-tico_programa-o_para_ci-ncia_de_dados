@@ -16,7 +16,6 @@ dataFrame.to_csv(
 # dados primários
 # total de passageitos
 totalPassageiros = dataFrame.shape[0]
-print(totalPassageiros)
 # quantos sobreviventes tiveram
 sobreviventes = dataFrame['Survived'].value_counts()[0]
 # array sobreviventes
@@ -29,10 +28,13 @@ homens = dataFrame['Sex'].value_counts()['male']
 mulheres = dataFrame['Sex'].value_counts()['female']
 # primeira classe
 primeiraClasse = dataFrame['Pclass'].value_counts()[1]
+sobreviventesClasse1 = dataFrame[dataFrame['Pclass'] == 1]['Survived'].to_numpy()
 # segunda classe
 segundaClasse = dataFrame['Pclass'].value_counts()[2]
+sobreviventesClasse2 = dataFrame[dataFrame['Pclass'] == 2]['Survived'].to_numpy()
 # terceira classe
 terceiraClasse = dataFrame['Pclass'].value_counts()[3]
+sobreviventesClasse3 = dataFrame[dataFrame['Pclass'] == 3]['Survived'].to_numpy()
 # array com as tarifas
 tarifaArray = dataFrame['Fare'].to_numpy()
 # array com as idades
