@@ -19,6 +19,8 @@ totalPassageiros = dataFrame.shape[0]
 print(totalPassageiros)
 # quantos sobreviventes tiveram
 sobreviventes = dataFrame['Survived'].value_counts()[0]
+# array sobreviventes
+arraySobreviventes = dataFrame['Survived'].to_numpy()
 # quantos morreram
 mortos = dataFrame['Survived'].value_counts()[1]
 # quantos homens
@@ -33,7 +35,7 @@ segundaClasse = dataFrame['Pclass'].value_counts()[2]
 terceiraClasse = dataFrame['Pclass'].value_counts()[3]
 # array com as tarifas
 tarifaArray = dataFrame['Fare'].to_numpy()
-print(tarifaArray)
 # array com as idades
-IdadeArray = dataFrame['Age'].to_numpy()
-print(IdadeArray)
+idadeArray = dataFrame['Age'].to_numpy()
+# arrar com quantidade de familiares
+familiaresArray = dataFrame['FamilyAboard'].to_numpy()
